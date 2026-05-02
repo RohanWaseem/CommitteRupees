@@ -30,7 +30,7 @@ setMenu(true)
 
   const axiosdata =async()=>{
 try {
-    await axios.get("http://localhost:5000/getdata")
+    await axios.get("https://committerupees-production.up.railway.app/getdata")
     .then((res)=>setGetdatas(res.data.data))
     .catch((err)=>console.error(err))
 } catch (error) {

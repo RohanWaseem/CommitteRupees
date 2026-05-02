@@ -220,7 +220,9 @@ mongoose.connect(process.env.MONGO_URI)
     console.log("Still getting error ❌:", err.message);
 });
 
-app.listen(5000,()=>{
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT,()=>{
     console.log("server started")
 })
 

@@ -16,7 +16,7 @@ const ProtectedRoute = ({ allowedpage, children }) => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/ProtectedRoute", {
+      const res = await fetch("https://committerupees-production.up.railway.app/ProtectedRoute", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

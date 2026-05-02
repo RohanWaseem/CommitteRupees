@@ -62,7 +62,7 @@ try {
             const name = localStorage.getItem("withdrawname")
             const moneyoption = localStorage.getItem("withdrawmoneyoption")
 
-    const res = await fetch("http://localhost:5000/createnewcustomer",{
+    const res = await fetch("https://committerupees-production.up.railway.app/createnewcustomer",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({name:name ,amount: withdrawamount , optionmoney:moneyoption , detail:withdrawdetail})
@@ -106,7 +106,7 @@ const handlecross=()=>{
 
 const axiosdata =async()=>{
 try {
-    await axios.get("http://localhost:5000/getdata")
+    await axios.get("https://committerupees-production.up.railway.app/getdata")
     .then((res)=>setGetdatas(res.data.data))
     .catch((err)=>console.error(err))
 } catch (error) {
@@ -181,7 +181,7 @@ setWithdrawmoney(true)
     const handlesubmits =async(e)=>{
 e.preventDefault()
 try {
-    const res = await fetch("http://localhost:5000/createnewcustomer",{
+    const res = await fetch("https://committerupees-production.up.railway.app/createnewcustomer",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({name , amount , optionmoney , detail})
